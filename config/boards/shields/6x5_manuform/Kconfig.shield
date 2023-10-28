@@ -1,10 +1,10 @@
-config SHIELD_6x5_MANUFORM
+config SHIELD_CORNEXIAO
     bool
 
-config SHIELD_6x5_MANUFORM_LEFT
-    def_bool $(shields_list_contains,6x5_manuform_left)
-    select SHIELD_6x5_MANUFORM
+config SHIELD_CORNEXIAO_LEFT
+    def_bool $(shields_list_contains,cornexiao_left)
+    select SHIELD_CORNEXIAO
 
-config SHIELD_6x5_MANUFORM_RIGHT
-    def_bool $(shields_list_contains,6x5_manuform_right)
-    select SHIELD_6x5_MANUFORM
+config SHIELD_CORNEXIAO_RIGHT
+    def_bool $(shields_list_contains,cornexiao_right)
+    select SHIELD_CORNEXIAO

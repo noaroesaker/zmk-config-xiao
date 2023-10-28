@@ -14,6 +14,6 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: 6x5_manuform_left
+    shield: cornexiao_left
   - board: seeeduino_xiao_ble
-    shield: 6x5_manuform_right
+    shield: cornexiao_right
