@@ -10,6 +10,11 @@ This one helped me figure out the layout for the files i need to make the firmwa
 But lets not forget the best layout for custom keyboards :)
 https://github.com/foostan/crkbd
 
+And also the youtubers who helped me understand:
+https://www.youtube.com/@joe_scotto
+https://www.youtube.com/@SethusBuilds
+https://www.youtube.com/@BenVallacksKeyboards
+https://www.youtube.com/@BenVallack
 
 This corne like build features a Xiao BLE controller and a custom designed board designed by me, but heavily inspired by the crkbd.
 The wiring based on how the kiai split does it to keep both controllers up side but not use multiple pads like the older cornes or the helix
