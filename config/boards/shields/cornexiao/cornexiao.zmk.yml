@@ -1,8 +1,8 @@
 file_format: "1"
-id: 6x5_manuform
-Name: 6x5_manuform
+id: cornexiao
+Name: cornexiao
 type: shield
-url: https://github.com/WainingForests/zmk-config-xiao/
+url: https://github.com/noaroesaker/zmk-config-xiao
 requires: [seeed_xiao]
 features:
   - keys
