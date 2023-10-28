@@ -11,74 +11,20 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
-        row-gpios
-            = 
+        row-gpios = 
             <&xiao_d  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //row 0
             <&xiao_d  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //row 1
             <&xiao_d  1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //row 2
             <&xiao_d  2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  //row 3
-            ;
-		col-gpios
-            = 
+        ;
+		col-gpios = 
             <&xiao_d  7 (GPIO_ACTIVE_HIGH)>, //col 0
             <&xiao_d  3 (GPIO_ACTIVE_HIGH)>, //col 1
             <&xiao_d 10 (GPIO_ACTIVE_HIGH)>, //col 2
             <&xiao_d  9 (GPIO_ACTIVE_HIGH)>, //col 3
             <&xiao_d  5 (GPIO_ACTIVE_HIGH)>, //col 4
             <&xiao_d  6 (GPIO_ACTIVE_HIGH)>  //col 5
-            ;
+        ;
     };
 };
-
-/*
-manuform
-/ {
-    kscan0: kscan_0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
-        diode-direction = "col2row";
-        
-        row-gpios
-            = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
-            , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
-            , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
-            , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
-            , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
-            ;
-        col-gpios
-            = <&xiao_d 10 GPIO_ACTIVE_HIGH> 
-            , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
-            , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
-            , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
-            , <&xiao_d 6 GPIO_ACTIVE_HIGH> 
-            , <&xiao_d 5 GPIO_ACTIVE_HIGH>
-            ;
-
-    };
-};
-
-kiai
-/ {
-    kscan0: kscan { 
-		compatible = "zmk,kscan-gpio-matrix";
-		label = "KSCAN";
-		diode-direction = "row2col";
-		row-gpios
-			= 
-			<&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-			<&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			;
-		col-gpios
-			= 
-			<&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-			<&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-			<&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	
-			<&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			;
-
-	};
-};
-*/
+//(PINOUT XIAO BLE) https://www.google.com/search?q=xiao+ble+pinout&client=firefox-b-d&sca_esv=577436533&tbm=isch&source=lnms&sa=X&ved=2ahUKEwja3Kz_2piCAxUGbvEDHVgwCp8Q_AUoAXoECAEQAw&biw=1920&bih=963&dpr=1#imgrc=SoJr8nGvorvzZM
