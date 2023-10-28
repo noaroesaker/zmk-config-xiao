@@ -20,12 +20,12 @@
             ;
 		col-gpios
             = 
-            <&xiao_d  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //col 0
-            <&xiao_d  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //col 1
-            <&xiao_d 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //col 2
-            <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //col 3
-            <&xiao_d  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //col 4
-            <&xiao_d  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  //col 5
+            <&xiao_d  8 (GPIO_ACTIVE_HIGH)>, //col 0
+            <&xiao_d  4 (GPIO_ACTIVE_HIGH)>, //col 1
+            <&xiao_d 11 (GPIO_ACTIVE_HIGH)>, //col 2
+            <&xiao_d 10 (GPIO_ACTIVE_HIGH)>, //col 3
+            <&xiao_d  6 (GPIO_ACTIVE_HIGH)>, //col 4
+            <&xiao_d  7 (GPIO_ACTIVE_HIGH)>  //col 5
             ;
     };
 };
