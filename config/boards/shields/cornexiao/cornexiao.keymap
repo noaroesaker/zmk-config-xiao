@@ -5,67 +5,75 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
-
-                config_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &kp LGUI   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
+    behaviors {
+        ESC_LALT: ESC_LALT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ESC_LALT";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp LALT>;
         };
+    };
+
+    macros {
+        ALFA: ALFA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N2)>;
+            label = "ALFA";
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        qwerty {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E      &kp R      &kp T        &kp Y     &kp U     &kp I      &kp O    &kp P     &kp LBKT
+&kp LCTRL  &kp A  &kp S  &kp D      &kp F      &kp G        &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V      &kp B        &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                         &ESC_LALT  &lt 2 DEL  &kp SPACE    &kp BSPC  &kp LGUI  &mo 3
+            >;
+        };
+
+        colemakdh {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp F      &kp P      &kp B        &kp J     &kp L     &kp U      &kp Y    &kp SEMI  &kp LBKT
+&kp LCTRL  &kp A  &kp R  &kp S      &kp T      &kp G        &kp M     &kp N     &kp E      &kp I    &kp O     &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp D      &kp V        &kp K     &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                         &ESC_LALT  &lt 2 DEL  &kp SPACE    &kp BSPC  &kp LGUI  &mo 3
+            >;
+        };
+
+        number {
+            bindings = <
+&kp PIPE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT              &kp CARET        &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp UNDERSCORE
+&kp LCTRL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                 &kp N6           &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+&kp LSHFT  &trans    &ALFA   &trans    &trans    &kp LS(NON_US_HASH)    &kp NON_US_HASH  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+                             &trans    &trans    &trans                 &kp RET          &trans    &kp RALT
+            >;
+        };
+
+        function {
+            bindings = <
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp F6      &kp F7            &kp F8    &kp F9   &kp F10   &kp BSPC
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp F16     &kp F17           &kp F18   &kp F19  &kp F20   &kp BSPC
+&mo 4   &kp F21  &kp F22  &kp F23  &kp F24  &trans     &kp K_PREV  &kp K_NEXT        &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
+                          &trans   &trans   &trans     &kp RET     &kp K_PLAY_PAUSE  &kp RALT
+            >;
+        };
+
+        config {
+            bindings = <
+&trans      &trans             &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &tog 0
+&bt BT_CLR  &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &tog 1
+&trans      &ext_power EP_OFF  &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                             &trans        &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+    };
 };
