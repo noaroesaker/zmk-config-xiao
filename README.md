@@ -21,5 +21,7 @@ The wiring based on how the kiai split does it to keep both controllers up side 
 
 KiCad project is a redesigned corne choc, but everything is changed except the general outline. Files in this repository
 
-I am currently waiting for the pcb to arrive, but i will post a picture once it arrives and i have tested everything.
-I dont recommend ordering the pcb until i have tested it.
+The PCB did work, but there is some clearance issues with the power switch and the controller, so that will be changed in the kicad folder.
+
+battery test:
+10 nov 22:53:31 L = 3,89V R = 3,89V

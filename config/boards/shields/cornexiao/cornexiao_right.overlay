@@ -28,6 +28,3 @@
     };
 };
 //(PINOUT XIAO BLE) https://www.google.com/search?q=xiao+ble+pinout&client=firefox-b-d&sca_esv=577436533&tbm=isch&source=lnms&sa=X&ved=2ahUKEwja3Kz_2piCAxUGbvEDHVgwCp8Q_AUoAXoECAEQAw&biw=1920&bih=963&dpr=1#imgrc=SoJr8nGvorvzZM
-
-//forventet knapp om col0 (7) og row0 (8) trykkes: BSPC
-//forventet knapp om col5 (6) og row2 (1) trykkes: N
