@@ -17,5 +17,5 @@ include:
     shield: cornexiao_left
   - board: seeeduino_xiao_ble
     shield: cornexiao_right
-  - board: nice_nano_v2
+  - board: seeeduino_xiao_ble
     shield: settings_reset
