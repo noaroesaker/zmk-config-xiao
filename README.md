@@ -31,9 +31,10 @@ battery test:
 11 nov 12:15:10 L = 3,84V R = 3,85V
 + 01:30 (youtube and 10 min osu) =
 11 nov 13:42:30 L = 3,83V R = 3,84V
-+ 00:00 (disconnect battery) =
-11 nov 13:42:30 L = 3,83V R = 3,84V
-
++ 10:00 (disconnect battery) =
+12 nov 11:48:30 L = 3,83V R = 3,85V
++ 08:45 (youtube usage) =
+12 nov 20:27:30 L = 3,79V R = 3,82V
 
 avrg loss
   L = 0,004V/h
