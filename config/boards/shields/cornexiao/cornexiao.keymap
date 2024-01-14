@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -36,7 +35,7 @@
 &kp TAB    &kp Q  &kp W  &kp E      &kp R      &kp T        &kp Y     &kp U     &kp I      &kp O    &kp P     &kp LBKT
 &kp LCTRL  &kp A  &kp S  &kp D      &kp F      &kp G        &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z  &kp X  &kp C      &kp V      &kp B        &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-                         &ESC_LALT  &lt 2 DEL  &kp SPACE    &kp BSPC  &kp LGUI  &mo 3
+                         &ESC_LALT  &lt 3 DEL  &kp SPACE    &kp BSPC  &kp LGUI  &mo 4
             >;
         };
 
@@ -45,34 +44,34 @@
 &kp TAB    &kp Q  &kp W  &kp F      &kp P      &kp B        &kp J     &kp L     &kp U      &kp Y    &kp SEMI  &kp LBKT
 &kp LCTRL  &kp A  &kp R  &kp S      &kp T      &kp G        &kp M     &kp N     &kp E      &kp I    &kp O     &kp SQT
 &kp LSHFT  &kp Z  &kp X  &kp C      &kp D      &kp V        &kp K     &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-                         &ESC_LALT  &lt 2 DEL  &kp SPACE    &kp BSPC  &kp LGUI  &mo 3
+                         &ESC_LALT  &lt 3 DEL  &kp SPACE    &kp BSPC  &kp LGUI  &mo 4
             >;
         };
 
         number {
             bindings = <
-&kp PIPE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT              &kp CARET        &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp UNDERSCORE
-&kp LCTRL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                 &kp N6           &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-&kp LSHFT  &trans    &ALFA   &trans    &trans    &kp LS(NON_US_HASH)    &kp NON_US_HASH  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                             &trans    &trans    &trans                 &kp RET          &trans    &kp RALT
+&kp GRAVE          &kp EXCL  &kp AT            &kp HASH  &kp DLLR          &kp PRCNT          &kp CARET            &kp AMPS    &kp STAR   &kp LPAR  &kp RPAR   &kp UNDERSCORE
+&kp LS(BACKSLASH)  &kp N1    &kp N2            &kp N3    &kp N4            &kp N5             &kp N6               &kp N7      &kp N8     &kp N9    &kp N0     &kp MINUS
+&kp LG(TAB)        &none    &kp RA(NUMBER_2)  &none    &kp RA(NUMBER_7)  &kp NON_US_BSLH    &kp LS(NON_US_BSLH)  &kp RA(N0)  &kp COMMA  &kp DOT   &kp SLASH  &kp ENTER
+                                               &none    &none            &none             &kp RET              &none      &kp RALT
             >;
         };
 
         function {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp F6      &kp F7            &kp F8    &kp F9   &kp F10   &kp BSPC
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp F16     &kp F17           &kp F18   &kp F19  &kp F20   &kp BSPC
-&mo 4   &kp F21  &kp F22  &kp F23  &kp F24  &trans     &kp K_PREV  &kp K_NEXT        &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
-                          &trans   &trans   &trans     &kp RET     &kp K_PLAY_PAUSE  &kp RALT
+&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp F6      &kp F7            &kp F8    &kp F9   &kp F10   &none
+&none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp F16     &kp F17           &kp F18   &kp F19  &kp F20   &none
+&mo 4  &kp F21  &kp F22  &kp F23  &kp F24  &none      &kp K_PREV  &kp K_NEXT        &kp LEFT  &kp UP   &kp DOWN  &kp RIGHT
+                         &none   &none   &none     &none       &kp K_PLAY_PAUSE  &none
             >;
         };
 
         config {
             bindings = <
-&trans      &trans             &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &tog 0
-&bt BT_CLR  &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &tog 1
-&trans      &ext_power EP_OFF  &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                             &trans        &trans  &trans    &trans  &trans  &trans
+&none      &none        &none        &none        &none  &none    &none  &none  &none  &none  &none  &tog 0
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none    &none  &none  &none  &none  &none  &tog 1
+&none      &none         &none        &none        &none  &none    &none  &none  &none  &none  &none  &none
+                                        &none        &none  &none    &none  &none  &none
             >;
         };
     };
