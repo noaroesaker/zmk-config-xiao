@@ -7,8 +7,11 @@
         zmk,matrix_transform = &default_transform;
     };
 
-    default_transform: keymap_transform_0 {
-        compatible = "zmk,matrix-transform";
+    cornexiao_physical_layout: cornexiao_physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "cornexiao";
+        transform = <&default_transform>;
+        kscan = <&kscan0>;
         columns = <12>;
         rows = <4>;
 // | SW1  | SW2  | SW3  | SW4  | SW5  | SW6  |   | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |
