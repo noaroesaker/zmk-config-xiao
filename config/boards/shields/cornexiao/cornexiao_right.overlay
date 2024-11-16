@@ -1,12 +1,9 @@
-// cornexiao_right.overlay
-
+#include <dt-bindings/zmk/matrix_transform.h>
 #include "cornexiao.dtsi"
 
-&default_transform {
-    col-offset = <6>;
-};
 
 &physical_layout0 {
+    col-offset = <6>;
     transform = <&matrix_transform>;
 };
 
