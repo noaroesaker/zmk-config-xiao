@@ -3,7 +3,6 @@
 
 
 &physical_layout0 {
-    col-offset = <6>;
     transform = <&matrix_transform>;
 };
 
