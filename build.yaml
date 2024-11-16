@@ -18,5 +18,6 @@ include:
     snippet: studio-rpc-usb-uart
   - board: seeeduino_xiao_ble
     shield: cornexiao_right
+    snippet: studio-rpc-usb-uart
   - board: seeeduino_xiao_ble
     shield: settings_reset
