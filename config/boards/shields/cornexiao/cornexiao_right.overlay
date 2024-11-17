@@ -4,7 +4,7 @@
     col-offset = <6>;
 };
 
-&kscan {
+&kscan0 {
         row-gpios = 
             <&xiao_d  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //row 0
             <&xiao_d  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //row 1
