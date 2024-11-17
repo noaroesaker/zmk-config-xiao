@@ -11,7 +11,7 @@
         zmk,physical-layout = &foostan_corne_6col_layout;
     };
 
-    &foostan_corne_6col_layout {
+    foostan_corne_6col_layout {
         transform = <&default_transform>;
     };
 
