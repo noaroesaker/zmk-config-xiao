@@ -1,6 +1,6 @@
 #include "cornexiao.dtsi"
 
-&transform {
+&default_transform {
     col-offset = <6>;
 };
 
