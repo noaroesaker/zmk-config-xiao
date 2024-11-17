@@ -6,4 +6,3 @@ url: https://github.com/noaroesaker/zmk_corne
 requires: [seeed_xiao]
 features:
   - keys
-  - studio

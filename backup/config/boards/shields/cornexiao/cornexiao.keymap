@@ -9,6 +9,24 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        ESC_LALT: ESC_LALT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ESC_LALT";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp LALT>;
+        };
+    };
+
+    macros {
+        ALFA: ALFA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N2)>;
+            label = "ALFA";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 

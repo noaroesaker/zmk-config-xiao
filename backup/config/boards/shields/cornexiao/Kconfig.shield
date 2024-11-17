@@ -1,0 +1,10 @@
+config SHIELD_CORNEXIAO
+    bool
+
+config SHIELD_CORNEXIAO_LEFT
+    def_bool $(shields_list_contains,cornexiao_left)
+    select SHIELD_CORNEXIAO
+
+config SHIELD_CORNEXIAO_RIGHT
+    def_bool $(shields_list_contains,cornexiao_right)
+    select SHIELD_CORNEXIAO
