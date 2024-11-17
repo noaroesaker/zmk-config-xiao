@@ -2,7 +2,9 @@
 
 #include <physical_layouts.dtsi>
 
-
+&foostan_corne_6col_layout {
+    transform = <&default_transform>;
+};
 
 / {
     chosen {
