@@ -1,6 +1,6 @@
 #include "cornexiao.dtsi" 
 
-&kscan0 {
+&kscan {
       row-gpios = 
             <&xiao_d  5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //row 0
             <&xiao_d  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //row 1

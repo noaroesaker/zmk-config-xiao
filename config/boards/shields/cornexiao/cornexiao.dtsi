@@ -11,8 +11,13 @@
 
     chosen {
         zmk,physical-layout = &physical_layout0;
-        zmk,kscan = &kscan0;
         zmk,physical-layout = &foostan_corne_6col_layout;
+    };
+
+    kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "col2row";
     };
 
     default_transform: keymap_transform_0 {
