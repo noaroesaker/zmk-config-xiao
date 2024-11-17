@@ -16,6 +16,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: cornexiao_left
     snippet: studio-rpc-usb-uart
+    snippet: zmk-usb-logging
   - board: seeeduino_xiao_ble
     shield: cornexiao_right
   - board: seeeduino_xiao_ble
