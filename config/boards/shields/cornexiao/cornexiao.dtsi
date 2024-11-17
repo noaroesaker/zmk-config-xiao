@@ -15,8 +15,6 @@
         zmk,physical-layout = &foostan_corne_6col_layout;
     };
 
-
-
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
