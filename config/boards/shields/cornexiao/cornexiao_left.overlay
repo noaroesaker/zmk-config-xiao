@@ -1,9 +1,5 @@
 #include "cornexiao.dtsi" 
 
-&transform {
-    col-offset = <1>;
-};
-
 &kscan {
       row-gpios = 
             <&xiao_d  5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, //row 0
