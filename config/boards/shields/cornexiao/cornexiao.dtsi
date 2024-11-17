@@ -36,7 +36,7 @@
         transform = <&transform>;
         kscan = <&kscan>;
 
-        keys  //                     w   h    x    y     rot    rx    ry
+        keys  //                     w   h    x    y     rot    rx    ryc
             = <&key_physical_attrs 100 100    0   37       0     0     0>
             , <&key_physical_attrs 100 100  100   37       0     0     0>
             , <&key_physical_attrs 100 100  200   12       0     0     0>
